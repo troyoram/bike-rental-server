@@ -1,5 +1,5 @@
-class BikesController < ApplicationController
-  before_action :set_bike, only: [:show, :update, :destroy]
+class BikesController < OpenReadController
+  before_action :set_bike, only: %i[update destroy]
 
   # GET /bikes
   def index
@@ -10,12 +10,12 @@ class BikesController < ApplicationController
 
   # GET /bikes/1
   def show
-    render json: @bike
+    render json: Bike.find(params[:id])
   end
 
   # POST /bikes
   def create
-    @bike = Bike.new(bike_params)
+    @bike = current_user.bikes.build(bike_params)
 
     if @bike.save
       render json: @bike, status: :created, location: @bike
@@ -36,16 +36,19 @@ class BikesController < ApplicationController
   # DELETE /bikes/1
   def destroy
     @bike.destroy
+
+    head :no_content
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_bike
-      @bike = Bike.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_bike
+    @bike = current_user.bikes.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def bike_params
-      params.require(:bike).permit(:style, :size)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def bike_params
+    params.require(:bike).permit(:style, :size)
+  end
+
+  private :set_bike, :bike_params
 end
