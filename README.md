@@ -2,11 +2,6 @@
 
 [Requirements](https://git.generalassemb.ly/ga-wdi-boston/full-stack-project/blob/master/requirements.md)
 
-Be prepared to discuss these items with a consultant during a 1 on 1.
-
-You may use GitHub, PowerPoint, Keynote, or any other tools you desire to
-complete any part of this.
-
 ## Project Idea
 
 What is your project idea?  How did you come up with it? Why? Who would use it?
