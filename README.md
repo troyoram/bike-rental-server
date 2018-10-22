@@ -21,7 +21,8 @@ in a SQL database for others to potentially rent.
 
 Although there are many companies that rent their own bikes, I would like to
 create an appliction where any individual or Local Bike Shop (LBS) can post
-bikes for rent all located in one repository.
+bikes for rent all located in one repository.  Think of AirBnB, but for bike
+rentals.
 
 The Bike Rental Client provides the user interface where new users can sign up
 and existing users can sign-in, change-password, and sign-out.  Signed in users
