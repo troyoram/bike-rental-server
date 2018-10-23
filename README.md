@@ -10,7 +10,7 @@ potentially rent.
 
 ## Project Links
 
-[Requirements](https://git.generalassemb.ly/ga-wdi-boston/full-stack-project/blob/master/requirements.md)
+[Requirements](https://git.generalassemb.ly/ga-wdi-boston/full-stack-project/)
 
 [Bike Rental Client - Repo](https://github.com/troyoram/bike-rental-client)
 
